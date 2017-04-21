@@ -1,16 +1,40 @@
-h1
-  color: red
+// Global styles
+*
+  box-sizing: border-box
 
-.container
-  @include container
+html
+  font-family: $noyh
+  font-weight: 300
+  -webkit-font-smoothing: antialiased
+  color: $not-black
 
-.ag1
-  @include span(2 of 10)
+h1, h2, h3, h4
+  font-family: $rubik
+  font-weight: 500
 
+html,
+body
+  height: 100%
 
-.ag2
-  @include span(6 of 10)
+body
+  margin: 0
+  padding: 0
+  max-width: 1280px
+  overflow-x: hidden
 
+img
+  max-width: 100%
 
-.ag3
-  @include span(2 of 10 last)
+a 
+  text-decoration: none
+
+button
+  border: none
+  background: none
+  outline: none
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+  appearance: none
+  -webkit-appearance: none
+  -moz-appearance: none

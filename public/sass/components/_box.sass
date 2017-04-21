@@ -1,0 +1,47 @@
+.box
+  float: left
+
+.box.lg
+  width: 100vw
+  height: 100vw
+
+  @media (min-width: $screen-xs)
+    width: 50%
+    height: 50vw
+
+.box.sm
+  width: 50%
+  height: 50vw
+
+  @media (min-width: $screen-xs)
+    width: 25%
+    height: 25vw
+
+.box.md
+  width: 100vw
+  height: 40vh
+  padding: $unit*4
+
+  @media (min-width: $screen-xs)
+    width: 50%
+
+.box.long
+  width: 100vw
+  min-height: 75vh
+  padding: $unit*4
+
+  @media (min-width: $screen-xs)
+    width: 50%
+
+
+.box.flex
+  display: flex
+  align-items: center
+
+.box.flat
+  width: 100%
+  height: 50vh
+
+  @media (min-width: $screen-xs)
+    width: 50%
+    height: 50vh

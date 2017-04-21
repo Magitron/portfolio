@@ -1,0 +1,135 @@
+.hero 
+  width: 100%
+  height: 100vh
+  // padding-top: span(1 of 12)
+  background-color: $saphire
+
+  color: $white
+  text-align: center
+
+  h2
+    font-size: 1.89em
+
+    @media (min-width: $screen-md)
+      font-size: 2.197em
+      margin: 0.3591em 0
+
+  p
+    font-family: $noyh
+    font-weight: 300
+    line-height: 1.2
+    margin-top: $unit*3
+
+.hero-title
+  font-size: 4em
+  text-transform: uppercase 
+
+  @media (min-width: $screen-md)
+    border-right: 1px solid $white  
+
+.half
+  width: 100%
+  height: 50vh
+
+  @media (min-width: $screen-xs)
+    width: 50%
+    height: 100vh
+    float: left
+
+.hero-pola
+  display: flex
+  align-items: center
+  justify-content: center
+
+  @media (min-width: $screen-xs)
+    justify-content: flex-end
+
+.hero-text
+  display: flex
+  align-items: flex-start
+  width: 40vh
+  margin: 0 auto
+
+  @media (min-width: $screen-xs)
+    width: 50%
+    align-items: center
+    text-align: left
+    padding-left: $unit*10
+    padding-right: $unit*10
+
+.pola
+  width: span(10 of 12)
+  height: 40vh
+  width: 40vh
+  background-color: $white
+  box-shadow: $box-shadow
+
+  @media (min-width: $screen-xs)
+    width: 40vw
+    height: 40vw
+    float: left
+
+.card
+  width: span(9 of 12)
+  min-height: span(10 of 12)
+  max-width: 310px
+  margin: 0 auto
+  background-color: $white
+  box-shadow: $box-shadow
+
+  @media (min-width: $screen-xs)
+    width: span(8 of 12)
+
+.clear
+  clear: both
+
+.work
+  height: 100vh
+  padding-top: $unit*15
+
+.item
+  .box
+    padding: $unit*5
+
+    p
+      @media (min-width: $screen-xs)
+        padding-left: $unit*6
+
+.nav
+  width: 100%
+  background-color: $saphire
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  align-items: center
+  padding: 0 $unit*5
+  padding-bottom: $unit*4
+  padding-top: $unit*4
+  padding-right: $unit*10
+
+  position: fixed
+  top: 0
+  z-index: 10
+
+  @media (min-width: $screen-xs)
+    flex-direction: row
+  ul
+    padding: 0
+    margin: 0
+    display: flex
+
+  li 
+    list-style: none
+  a 
+    padding: $unit*3 $unit*6
+    color: $white
+
+.contact-button
+  margin-top: $unit*6
+  display: block
+
+  @media (min-width: $screen-xs)
+    margin-top: 0
+
+
+

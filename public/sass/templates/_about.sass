@@ -1,0 +1,54 @@
+.about
+  display: flex
+  flex-direction: column-reverse
+
+  @media (min-width: $screen-xs)
+    display: block
+
+  .slick-dots
+    margin-bottom: $unit*5
+
+    display: flex
+    position: relative
+
+    button
+      padding: 0
+      font-weight: bold
+      font-size: .8em
+
+    li 
+      padding-bottom: $unit*2
+      width: 100px
+
+    .border 
+      position: absolute
+      width: 90px;
+      bottom: 0;
+      left: 0
+      height: 2px
+      background-color: $carnation
+      transition: $slow-animation
+
+  .box
+    padding: $unit*5
+
+    @media (min-width: $screen-xs)
+      padding: $unit*10 !important
+
+
+
+  .about-photos 
+    padding-top: 120px !important;
+
+    .card
+      width: span(10 of 12)
+      height: span(12 of 12)
+      padding: $unit*2
+
+    // .slick-list
+    //   box-shadow: $box-shadow
+
+.slider
+  height: 63vh
+  display: flex
+  align-items: center

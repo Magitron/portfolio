@@ -1,0 +1,97 @@
+// Blog Home
+
+.feature
+  padding: $unit*8
+
+  span
+    color: $carnation
+    font-size: 1em
+
+  a
+    text-align: right
+    margin-top: $unit*3
+    font-size: 0.8em
+    display: block
+
+.blog-sum
+  display: flex
+  width: span(10 of 12)
+  margin: 0 auto
+
+.blog-date
+  width: span(3 of 12)
+
+.blog-content
+  width: span(9 of 12)
+
+.blog-header 
+  width: 100%
+  position: absolute
+  z-index: 0
+  background-color: $saphire
+
+.blog-title-container,
+.blog-header 
+  height: 50vh
+  min-height: 200px
+
+
+// Blog Template
+.blog-hero 
+  height: 40vh;
+  background-color: $saphire
+  min-height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: $unit*2
+
+  h1
+    width: 100%
+    margin-left: $unit*14
+
+    @media (min-width: $screen-xs)
+      width: 625px;
+      margin: 0 auto;
+
+// Blog Post
+// ===
+
+.blog-post
+  padding-bottom: $unit*20
+
+  p
+    line-height: 1.4
+
+  article
+    padding: 0 $unit*5
+    max-width: 625px
+    margin: 0 auto
+
+    @media (min-width: $screen-xs)
+      padding: 0  
+
+.blog-nav
+  width: 100%
+  z-index: 1
+  position: absolute
+
+  a 
+    padding: $unit*5
+    color: $white
+    display: block
+    margin: 0
+    text-transform: uppercase
+
+.blog-title
+  color: $white
+  text-align: right
+  z-index: 1
+  position: relative
+
+.blog-title-container
+  width: 100%
+  display: flex
+  align-items: flex-end
+  z-index: 0
+  padding-bottom: $unit*8

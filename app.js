@@ -26,6 +26,18 @@ router.get('/', function *() {
   });
 });
 
+router.get('/blog', function *() {
+  yield this.render('blog', {
+    title: 'project-title'
+  });
+});
+
+router.get('/post', function *() {
+  yield this.render('post', {
+    title: 'project-title'
+  });
+});
+
 app.use(router.routes());
 
 if (!module.parent) {

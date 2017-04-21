@@ -69,10 +69,10 @@ gulp.task('js:prod', function() {
   .pipe(gulp.dest(JS.COMPILED));
 });
 
-gulp.task('watch', ['clean', 'sass:dev', 'js:dev', 'images', 'copy'], function () {
+gulp.task('watch', ['clean', 'copy', 'sass:dev', 'js:dev', 'images'], function () {
   gulp.watch(SASS.ORIGINAL, ['sass:dev']);
-  // gulp.watch(JS.ORIGINAL, ['js:dev']);
-  // gulp.watch(IMAGES.ORIGINAL, ['images']);
+  gulp.watch(JS.ORIGINAL, ['js:dev']);
+  gulp.watch(IMAGES.ORIGINAL, ['images']);
 });
 
 gulp.task('images', function () {
@@ -92,8 +92,8 @@ gulp.task('copy', function() {
   gulp.src('./public/swf/**/*')
   .pipe(gulpCopy('./dist/swf', {prefix:2}));    
 
-  return gulp.src('./public/img/*.pdf')
-  .pipe(gulpCopy(IMAGES.COMPILED, {prefix:3}));    
+  // return gulp.src('./public/img/*.pdf')
+  // .pipe(gulpCopy(IMAGES.COMPILED, {prefix:3}));    
 });
 
 gulp.task('clean', function (cb) {

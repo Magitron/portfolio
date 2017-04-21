@@ -1,0 +1,41 @@
+.testimonials
+  position: relative
+
+  .slider-content
+    display: flex;
+    align-items: center;
+
+.test-text
+  max-width: 300px
+  margin: 0 auto
+
+.test-title
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+
+.slide-generator
+  z-index: 1
+  position: absolute
+  padding: $unit*2
+  height: $tap-size*1.2
+  width: $tap-size*1.2
+  border-radius: 50%
+  background-color: $carnation
+  box-shadow: $box-shadow
+  top: 0
+  bottom: 0
+  margin: auto
+  left: 0
+  right: 0
+
+  svg
+    transition: $slow-animation
+
+  @media (min-width: $screen-xs)
+    height: $tap-size
+    width: $tap-size
+
+
