@@ -1,0 +1,129 @@
+.mobile-nav-container
+  width: 100%
+  background-color: $saphire
+  color: $white
+  position: fixed
+  top: 0
+  height: $tap-size
+  z-index: 100
+
+.mobile-nav,
+.mobile-sub-nav
+  padding: 0
+  margin: 0
+
+.mobile-nav
+  li
+    list-style: none
+    float: left
+
+    a
+      color: $white
+
+.mobile-sub-nav
+  position: absolute
+  top: 0
+  transition: $slow-animation
+  background-color: $saphire
+  z-index: -10
+  width: 100%
+
+  &.active
+    top: 44px
+    z-index: -10
+    background-color: $saphire
+
+  li a 
+    padding: 10px
+    display: block
+
+.mobile-menu-button,
+.mobile-email,
+.mobile-home-icon
+  background-color: $saphire
+
+
+.mobile-menu-button,
+.mobile-email
+  width: span(3 of 12)
+
+
+.mobile-home-icon
+  width: span(6 of 12)
+  text-align: center
+  font-family: $rubik
+  font-size: 1.3em
+
+  a
+    padding: 5px
+    display: block
+
+
+.mobile-nav-trigger
+  padding: 5px 15px
+  display: block
+  color: $white
+  font-family: $rubik
+  font-size: 0.6em
+
+.mobile-email
+  align-items: center
+  justify-content: center
+  display: flex
+  height: $tap-size
+  font-family: $rubik
+  font-size: 0.7em
+
+  a 
+    display: block
+    padding: 4px 9px
+    display: block
+    border: 1px solid $white
+    border-radius: $border-radius
+
+
+// Menu button
+
+.bar
+  height: 2px
+  border-radius: $border-radius
+  background-color: $white
+  transition: $slow-animation
+
+.bar1,
+.bar2
+  margin-bottom: 4.5px
+
+.bar1,
+.bar3
+  width: 100%
+
+.bar2
+  width: 80%
+
+.bar3
+  margin-bottom: 2px
+
+.ham
+  transition: $slow-animation
+
+  &.active
+    margin-left: 6px
+
+    .bar2
+      width: 0
+
+    .bar1
+      -ms-transform: rotate(45deg) /* IE 9 */
+      -webkit-transform: rotate(45deg) /* Chrome, Safari, Opera */
+      transform: rotate(45deg)
+      transform-origin: top left
+
+
+    .bar3
+      -ms-transform: rotate(-45deg) /* IE 9 */
+      -webkit-transform: rotate(-45deg) /* Chrome, Safari, Opera */
+      transform: rotate(-45deg)
+      transform-origin: bottom left
+
+

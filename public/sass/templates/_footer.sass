@@ -1,9 +1,25 @@
 .footer
   width: 100%
-  padding: $unit*20
+  padding: $unit*10
+  display: flex
+  flex-direction: column
   text-align: center
+  max-width: $screen-sm
+  margin: 0 auto
 
-  button
-    display: block
-    margin: 0 auto
-    margin-top: $unit*5
+  @media (min-width: $screen-xs)
+    flex-direction: row
+    text-align: left
+
+  .slide-bttn 
+    @media (min-width: $screen-xs)
+      margin-left: auto
+
+    a
+      padding: 12px 24px;
+      color: #fff;
+      margin-top: $unit*3
+
+  p
+    @media (min-width: $screen-xs)
+      @include span(4 of 12)

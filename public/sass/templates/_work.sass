@@ -17,17 +17,83 @@
     padding-left: $unit*4
 
 .work 
+  position: relative
+  overflow: hidden
+  height: auto
+  padding-top: $unit*15
+  padding-bottom: $unit*15
+
+  @media (min-width: $screen-xs)
+    padding-bottom: $unit*5
+
+  @media (min-width: $screen-md)
+    padding-bottom: $unit*8
+
+  .slider-content
+    position: relative
+    z-index: 10
+
   .box
+    height: auto !important
+
     @media (min-width: $screen-xs)
       padding: $unit*15
+      padding-top: $unit*8
 
       p
         max-width: 350px
+        line-height: 1.45
 
+  .img-code,
+  .img-design
+    position: absolute
+    width: 50%
+    left: 0
+    right: 0
 
+    margin: auto
+    pointer-events: none
+
+    @media (min-width: $screen-xs)
+      width: auto
+
+  .img-design
+    top: 25%
+
+    @media (min-width: $screen-xs)
+      bottom: 10%
+      top: auto
+      left: 10%
+      right: auto
+
+  .img-code
+    bottom: 5%
+    width: 40%
+
+    @media (min-width: $screen-xs)
+      bottom: 10%
+      right: 10%
+      left: auto
+      width: auto
+
+  
+
+.work-title 
+  margin-left: $unit*10
+
+.work-heading
+  position: relative
+  z-index: 10
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 55%
+  margin-left: $unit*15
+    
 
 // Work Slider
 // ---
+
 
 .item
   width: 100%

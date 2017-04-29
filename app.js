@@ -28,13 +28,55 @@ router.get('/', function *() {
 
 router.get('/blog', function *() {
   yield this.render('blog', {
-    title: 'project-title'
+    title: 'blog'
   });
 });
 
 router.get('/post', function *() {
   yield this.render('post', {
     title: 'project-title'
+  });
+});
+
+router.get('/uxsummit', function *() {
+  yield this.render('blogposts/uxsummit', {
+    title: 'project-title'
+  });
+});
+
+router.get('/messaging', function *() {
+  yield this.render('portfolio/messaging', {
+    title: 'messaging'
+  });
+});
+
+router.get('/hotnight', function *() {
+  yield this.render('portfolio/hotnight', {
+    title: 'hotnight'
+  });
+});
+
+router.get('/lighthouselabs', function *() {
+  yield this.render('portfolio/lighthouselabs', {
+    title: 'lighthouselabs'
+  });
+});
+
+router.get('/kidsclub', function *() {
+  yield this.render('portfolio/kidsclub', {
+    title: 'Canucks kids club'
+  });
+});
+
+router.get('/digital-divide', function *() {
+  yield this.render('portfolio/digitaldivide', {
+    title: 'Nuancing the Digital Divide'
+  });
+});
+
+router.get('/stormythreads', function *() {
+  yield this.render('portfolio/stormythreads', {
+    title: 'Stormy Threads'
   });
 });
 

@@ -1,0 +1,43 @@
+.desktop-nav
+  width: 100%
+  max-width: 1280px;
+  background-color: $saphire
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  align-items: center
+  padding: 0 $unit*5
+  padding-bottom: $unit*4
+  padding-top: $unit*4
+  padding-right: $unit*10
+
+  position: fixed
+  top: 0
+  z-index: 100
+
+  @media (min-width: $screen-xs)
+    flex-direction: row
+  ul
+    padding: 0
+    margin: 0
+    display: flex
+
+  li 
+    list-style: none
+  a 
+    padding: $unit*3 $unit*6
+    color: $white
+    display: block
+
+.contact-button
+  margin-top: $unit*6
+  display: block
+
+  @media (min-width: $screen-xs)
+    margin-top: 0
+
+
+.desktop-home-icon
+  font-family: $rubik
+  font-size: 1.3em
+  padding: $unit*2 $unit*6 !important

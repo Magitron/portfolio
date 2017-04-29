@@ -20,7 +20,7 @@
   color: $carnation
 
 .color-white
-  color: $white
+  color: $white !important
 
 .color-blue
   color: $saphire
@@ -28,10 +28,16 @@
 .color-dg
   color: $not-black
 
-.order-reverse-xs
-  @media (max-width: $screen-xs)
+.order-reverse-col-sm
+  @media (max-width: $screen-sm)
     display: flex
     flex-direction: column-reverse
+
+.order-reverse-row-sm
+  @media (max-width: $screen-sm)
+    display: flex
+    flex-direction: row-reverse
+    clear: both
 
 .n
   font-family: $noyh

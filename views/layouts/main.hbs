@@ -6,31 +6,52 @@
     <script src="js/slider.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
     
     
 
   </head>
   <body>
-  <div class="nav">
-  <ul>
-    <li><a class="link bold" href="/">MC</a></li>
-    <li><a class="link bold" href="https://github.com/Magitron" target="_blank">GitHub</a></li>
-    <li><a class="link bold" href="https://www.linkedin.com/in/maggiecaspar/" target="_blank">LinkedIn</a></li>
-    <li><a class="link bold" href="https://angel.co/maggie-caspar" target="_blank">Angel.co</a></li>
-  </ul>
-  <div class="flex">
-    <a href="#0" class="bttn">Email me</a>
-  </div>
-   {{!--  <button class="btn btn-ghost contact-button" type="email" mailto="maggiecaspar@gmail.com">Email me</button> --}}
-  </div>
-      {{{@body}}}
-
-  <footer>
-    <div class="footer bg-grey">
-      <p>If you have an inovative project you’d like me to work on, or you’d simply like to chat, let me know :)</p>
-      <button class="btn btn-primary" mailto="maggiecaspar@gmail.com">Drop me a line</button>
+    <div class="desktop-nav hidden-xs-down">
+      <ul>
+        <li><a class="desktop-home-icon link bold" href="/">MC</a></li>
+        <li><a class="link bold" href="https://github.com/Magitron" target="_blank">GitHub</a></li>
+        <li><a class="link bold" href="https://www.linkedin.com/in/maggiecaspar/" target="_blank">LinkedIn</a></li>
+        <li><a class="link bold" href="https://angel.co/maggie-caspar" target="_blank">Angel.co</a></li>
+      </ul>
+      <div class="slide-bttn">
+        <a href="#0" class="bttn">Email me</a>
+      </div>
     </div>
-    <div class="clear"></div>
+
+    <div class="mobile-nav-container hidden-xs-up">
+      <ul class="mobile-nav">
+        <li class="mobile-menu-button"><button class="mobile-nav-trigger"><div class="ham"><div class="bar bar1"></div><div class="bar bar2"></div><div class="bar bar3"></div></div>Menu</button></li>
+          <ul class="mobile-sub-nav">
+            <li><a class="link bold" href="https://github.com/Magitron" target="_blank">GitHub</a></li>
+            <li><a class="link bold" href="https://www.linkedin.com/in/maggiecaspar/" target="_blank">LinkedIn</a></li>
+            <li><a class="link bold" href="https://angel.co/maggie-caspar" target="_blank">Angel.co</a></li>
+            <div class="clear"></div>
+          </ul>
+        <li class="mobile-home-icon"><a href="/">MC</a></li>
+        <li class="flex mobile-email">
+          <a href="#0" class=" ">Email me</a></div>
+        </li>
+
+      </ul>
+      
+    </div>
+    <main>
+      {{{@body}}}
+    </main>
+  <footer class="bg-cn">
+    <div class="footer">
+      <p class="float-left color-white bold">To get in touch with me about a potential project please contact me via email.</p>
+      <div class="slide-bttn">
+        <a href="#0" class="bttn">Email me</a>
+      </div>
+      <div class="clear"></div>
+    </div>
   </footer>
   
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
