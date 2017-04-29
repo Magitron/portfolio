@@ -83,6 +83,6 @@ router.get('/stormythreads', function *() {
 app.use(router.routes());
 
 if (!module.parent) {
-  app.listen(1337);
+  app.listen(process.env.PORT || 1337);
   console.log('listening on port 1337');
 }
