@@ -20,10 +20,7 @@
     "koa-logger": "^2.0.1",
     "koa-router": "^5.4.0",
     "koa-static": "^3.0.0",
-    "mongodb": "^2.2.26"
-  },
-  "devDependencies": {
-    "compass": "^0.1.1",
+    "mongodb": "^2.2.26",
     "gulp": "^3.9.1",
     "gulp-compass": "^2.1.0",
     "gulp-copy": "^1.0.0",
@@ -33,7 +30,10 @@
     "gulp-uglify": "^2.0.1",
     "imagemin-pngquant": "^5.0.0",
     "normalize": "^0.3.1",
-    "rimraf": "^2.6.1",
+    "rimraf": "^2.6.1"
+  },
+  "devDependencies": {
+    "compass": "^0.1.1",
     "run-sequence": "^1.2.2",
     "susy": "^2.2.12"
   }
