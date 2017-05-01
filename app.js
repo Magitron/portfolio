@@ -7,7 +7,7 @@ const koa     = require('koa'),
 
 const app = new koa();
 
-process.env.PWD = process.cwd()
+// process.env.PWD = process.cwd()
 // Logger
 app.use(logger());
 app.use(serve(process.env.PWD + '/dist'));
