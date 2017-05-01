@@ -14,11 +14,17 @@
   .slide-bttn 
     @media (min-width: $screen-xs)
       margin-left: auto
-
+      z-index: 1
+      
     a
       padding: 12px 24px;
       color: #fff;
       margin-top: $unit*3
+
+      &:hover, 
+      &:active,
+      &:focus
+        color: $carnation
 
   p
     @media (min-width: $screen-xs)
