@@ -1,10 +1,11 @@
 .container 
   position: relative
+  max-width: 1280px
+  margin: 0 auto
 
 .hero 
   width: 100%
   height: 100vh
-  // padding-top: span(1 of 12)
   background-color: $saphire
 
   color: $white
@@ -20,12 +21,17 @@
   p
     font-family: $noyh
     font-weight: 300
+    font-size: 1.1em
     line-height: 1.2
     margin-top: $unit*3
 
 .hero-title
-  font-size: 4em
+  width: 100%
+  font-size: 3.5em
   text-transform: uppercase 
+
+  @media (min-width: $screen-md)
+    font-size: 4em
 
   @media (min-width: $screen-md)
     border-right: 1px solid $white  
@@ -53,19 +59,15 @@
   justify-content: center
   margin: 0 auto
 
-  p
-    width: 40vh
-    margin: 0 auto
-
-    @media (min-width: $screen-xs)
-      margin: 0
-
   @media (min-width: $screen-xs)
     width: 50%
     align-items: center
     text-align: left
     padding-left: $unit*10
     padding-right: $unit*10
+
+.hero-text-wrapper
+  width: 345px;
 
 .pola
   width: span(10 of 12)

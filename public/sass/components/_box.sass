@@ -1,5 +1,8 @@
 .box
   float: left
+  
+  @media (min-width: $screen-sm)
+    max-height: 640px
 
 .box.lg
   width: 100vw
@@ -16,6 +19,7 @@
   @media (min-width: $screen-sm)
     width: 25%
     height: 25vw
+    max-height: 320px
 
 .box.md
   width: 100vw
@@ -45,3 +49,4 @@
   @media (min-width: $screen-sm)
     width: 50%
     height: 50vw
+    max-height: 500px

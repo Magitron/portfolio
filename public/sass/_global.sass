@@ -17,13 +17,15 @@ body
   height: 100%
 
 body
-  margin: 0
+  margin: 0 auto
   padding: 0
-  max-width: 1280px
   overflow-x: hidden
 
 main
   margin-top: $tap-size
+
+  @media (min-width: $screen-xs)
+    margin-top: 0
 
 img
   max-width: 100%
@@ -41,3 +43,4 @@ button
   appearance: none
   -webkit-appearance: none
   -moz-appearance: none
+
