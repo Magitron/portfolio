@@ -1,6 +1,8 @@
 .desktop-nav-container
   width: 100%
   background-color: $saphire
+  position: fixed
+  z-index: 100
   
 .desktop-nav
   display: flex
@@ -11,10 +13,7 @@
   padding-bottom: $unit*4
   padding-top: $unit*4
   padding-right: $unit*10
-
-  position: fixed
   top: 0
-  z-index: 100
 
   @media (min-width: $screen-xs)
     flex-direction: row

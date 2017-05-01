@@ -80,6 +80,35 @@ router.get('/stormythreads', function *() {
   });
 });
 
+router.get('/posters', function *() {
+  yield this.render('portfolio/posters', {
+    title: 'Graphic posters'
+  });
+});
+
+router.get('/wip', function *() {
+  yield this.render('portfolio/wip', {
+    title: 'Works in progress'
+  });
+});
+
+router.get('/bd-hack', function *() {
+  yield this.render('portfolio/bd-hack', {
+    title: 'BuildDirect Hackathon Project'
+  });
+});
+
+router.get('/forward', function *() {
+  yield this.render('portfolio/forward', {
+    title: 'Code it Forward'
+  });
+});
+
+router.get('/possible', function *() {
+  yield this.render('portfolio/possible', {
+    title: 'Possible Canadas'
+  });
+});
 app.use(router.routes());
 
 if (!module.parent) {

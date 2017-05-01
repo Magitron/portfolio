@@ -93,6 +93,7 @@ $( document ).ready(function() {
     slidesToShow: 3,
     nextArrow: $('.blog-post .slide-generator'),
     prevArrow: $('.blog-post .slide-generator'),
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 768,

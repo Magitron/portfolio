@@ -101,9 +101,18 @@
 
 .blog-img-container
   background-color: $wall
-  width: 100%
-  margin: $unit*10 0
-  padding: $unit*4 0
+  margin-top: $unit*8
+  margin-bottom: 0
+  margin-left: -$unit*5
+  margin-right: -$unit*5
+  padding: $unit*4
+
+  @media (min-width: $screen-xs)
+    width: 100%
+    margin: $unit*10 0
+
+  img
+    width: 100%
 
 .blog-nav
   width: 100%
