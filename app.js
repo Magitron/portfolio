@@ -7,11 +7,9 @@ const koa     = require('koa'),
 
 const app = new koa();
 
-// process.env.PWD = process.cwd()
 // Logger
 app.use(logger());
-app.use(serve(process.env.PWD + '/dist'));
-
+app.use(serve(process.cwd() + '/dist'));
 
 app.use(hbs({
   defaultLayout: 'main', 
