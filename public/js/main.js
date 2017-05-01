@@ -1,0 +1,2 @@
+require("./slider");
+require("./cookies");

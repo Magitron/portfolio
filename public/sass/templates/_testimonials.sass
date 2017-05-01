@@ -1,12 +1,19 @@
 .testimonials
   position: relative
 
+  .slick-slide
+    padding: $unit*10 0
+
   .slider-content
     display: flex;
     align-items: center;
 
+  .slick-track
+    display: flex
+    align-items: center
+
 .test-text
-  max-width: 300px
+  max-width: 350px
   margin: 0 auto
 
 .test-title
@@ -38,4 +45,13 @@
     height: $tap-size
     width: $tap-size
 
+blockquote
+  margin: 0
 
+.author,
+.company
+  font-style: normal
+
+.company
+  display: block
+  color: $dark-grey

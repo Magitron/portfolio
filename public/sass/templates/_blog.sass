@@ -54,6 +54,13 @@
   height: 50vh
   min-height: 200px
 
+.blog-tags
+  margin-top: $unit*2
+  margin-bottom: $unit*2
+
+  @media (min-width: $screen-xs)
+    margin-top: 0
+
 
 // Blog Template
 .blog-hero 
@@ -153,10 +160,12 @@
   .slider-content
     margin: $unit*5 0
     background-color: $wall
-    padding: $unit*10
+  
+    @media (min-width: $screen-xs)
+      padding: $unit*10
 
     .slick-slide
-      padding: $unit*6
+      padding: $unit*15 $unit*6
 
       img
         box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
