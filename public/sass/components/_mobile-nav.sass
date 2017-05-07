@@ -49,11 +49,6 @@ $nav-height: 50px
     border: 1px solid $white
     border-radius: $border-radius
 
-.mobnav-button,
-.mobile-email,
-.mobnav-home
-  // background-color: $saphire
-
 .mobnav-home
   text-align: center
   font-family: $rubik
@@ -62,7 +57,6 @@ $nav-height: 50px
   a
     padding: $unit*3
     display: block
-
 
 
 // SUB NAV
@@ -107,6 +101,7 @@ $nav-height: 50px
   transition: opacity 500ms, left 700ms, width 700ms
   box-shadow: $box-shadow
   top: 10px
+  overflow: hidden
 
   &.active
     pointer-events: all
@@ -129,10 +124,10 @@ $nav-height: 50px
 
 .mobnav-sub__nav .mobnav-sub__item
   font-family: $rubik
-  padding: $unit*4
+  padding: $unit*2 $unit*4
 
-  @media (min-width: $screen-xs)
-    padding: $unit*2 $unit*4
+  // @media (min-width: $screen-xs)
+  //   padding: $unit*2 $unit*4
 
 .mobnav-sub__links
   padding-top: $unit*3
@@ -144,13 +139,17 @@ $nav-height: 50px
   @media (min-width: $screen-xs)
     padding: $unit $unit*4
 
-// .mobnav-sub__nav
-  // @media (min-width: $screen-xs)
-  //   padding-bottom: $unit*2
+.mobnav-sub__contact
+  padding: 16px
+  background-color: #F9F9F9
 
-  // @media (min-width: $screen-xs)
-  //   padding: $unit*3 $unit*4
+  li
+    float: none
+    width: 100%
 
+.mobnav-sub__contact-link
+  color: $carnation
+  font-family: $rubik
 
 
 // Menu button
