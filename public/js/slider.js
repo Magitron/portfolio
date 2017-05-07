@@ -23,24 +23,12 @@ $( document ).ready(function() {
     $(this).addClass('active');
   });
 
-  $('.dtnav-list').find('a').click(function(){
+  $('.dtnav-list, .mobnav-sub').find('a').click(function(){
     var $href = $(this).attr('href');{
     var $anchor = $($href).offset();
     $('body').animate({ scrollTop: $anchor.top });
     return false;}
   });
-
-  // $('.about .slick-dots').append('<div class="border"></div>');
-
-  // $('.about .slick-dots li:first-child').click( function() {
-  //   $('.border').css('left', '0px');
-  // });
-  // $('.about .slick-dots li:nth-child(2)').click( function() {
-  //   $('.border').css('left', '110px');
-  // });
-  // $('.about .slick-dots li:nth-child(3)').click( function() {
-  //   $('.border').css('left', '210px');
-  // });
 
   // $('.work').find('.slider-content').slick({
   //   dots: true,
