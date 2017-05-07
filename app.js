@@ -112,6 +112,6 @@ router.get('/possible', function *() {
 app.use(router.routes());
 
 if (!module.parent) {
-  app.listen(process.env.PORT || 1337);
-  console.log('listening on port 1337');
+  app.listen(process.env.PORT || 3300);
+  console.log('listening on port 3300');
 }

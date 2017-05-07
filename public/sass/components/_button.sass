@@ -49,6 +49,10 @@
   &:hover
     background: darken($saphire, 10%)
 
+
+.btn.btn-ghost
+  text-transform: uppercase
+
 .btn.btn-ghost.white
   color: $white
   border: 2px solid $white
@@ -69,64 +73,60 @@
     color: darken($concrete, 10%)
 
 
-
-.slide-bttn
+.btn.slide-btn
   display:flex
   align-items: center
   justify-content: center
+  padding: 0 !important
 
+  a.bttn 
+    text-decoration: none
+    -webkit-transition: 0.3s all ease
+    transition: 0.3s ease all
 
-a.bttn 
-  color: $saphire
-  text-decoration: none
-  -webkit-transition: 0.3s all ease
-  transition: 0.3s ease all
-  &:hover 
-    color: $saphire
-  
-  &:focus 
-    color: $saphire
-
-
-.bttn 
-  font-size: 18px
-  letter-spacing: 2px
-  text-transform: uppercase
-  display: inline-block
-  text-align: center
-  font-weight: bold
-  padding: 14px 0px
-  border: 3px solid $white
-  border-radius: 2px
-  position: relative
- 
-  &:before 
-    -webkit-transition: 0.5s all ease
-    transition: 0.5s all ease
-    position: absolute
-    top: 0
-    left: 50%
-    right: 50%
-    bottom: 0
-    opacity: 0
-    content: ''
-    background-color: $white
-    z-index: -2
-  
-  &:hover 
+  .bttn 
+    font-size: 0.8em
+    letter-spacing: 2px
+    text-transform: uppercase
+    display: inline-block
+    text-align: center
+    padding: $unit*3+2
+    border: 3px solid $white
+    border-radius: 2px
+    position: relative
+    color: $white
+    z-index: 1
+   
     &:before 
       -webkit-transition: 0.5s all ease
       transition: 0.5s all ease
-      left: 0
-      right: 0
-      opacity: 1
+      position: absolute
+      top: 0
+      left: 50%
+      right: 50%
+      bottom: 0
+      opacity: 0
+      content: ''
+      background-color: $white
+      z-index: -2
     
-  
-  &:focus 
-    &:before 
-      transition: 0.5s all ease
-      left: 0
-      right: 0
-      opacity: 1
-    
-  
+    &:hover,
+    &:focus
+      &:before 
+        -webkit-transition: 0.5s all ease
+        transition: 0.5s all ease
+        left: 0
+        right: 0
+        opacity: 1
+      
+.btn.slide-btn.red
+  .bttn 
+    &:hover,
+    &:focus 
+      color: $carnation
+
+.btn.slide-btn.blue
+  .bttn 
+    &:hover,
+    &:focus 
+      color: $saphire

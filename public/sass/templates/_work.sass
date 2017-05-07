@@ -4,17 +4,41 @@
 .work-left
   text-align: left
 
+  @media (min-width: $screen-xs)
+    padding-left: $unit*12 !important
+    padding-right: $unit*10 !important
+
+  p
+    @media (min-width: $screen-xs)
+      // margin-left: auto;
+
+    @media (min-width: $screen-sm)
+      margin-left: initial
+
 .work-right
   text-align: right
 
   @media (min-width: $screen-xs)
+    padding-right: $unit*12 !important
+    padding-left: $unit*10 !important
+
+  @media (min-width: $screen-sm)
     text-align: left
+
+  p
+    @media (min-width: $screen-xs)
+      margin-left: auto
+
+    @media (min-width: $screen-sm)
+      margin-left: initial
 
 .work-right p,
 .work-left p
-  
   @media (min-width: $screen-xs)
-    padding-left: $unit*4
+    width: 80%
+
+  @media (min-width: $screen-md)
+    padding-left: $unit*8
 
 .work 
   position: relative
@@ -23,7 +47,7 @@
   padding-top: $unit*15
   padding-bottom: $unit*15
 
-  @media (min-width: $screen-xs)
+  @media (min-width: $screen-sm)
     padding-bottom: $unit*5
 
   @media (min-width: $screen-md)
@@ -36,7 +60,7 @@
   .box
     height: auto !important
 
-    @media (min-width: $screen-xs)
+    @media (min-width: $screen-sm)
       padding: $unit*15
       padding-top: $unit*8
 
@@ -50,17 +74,23 @@
     width: 50%
     left: 0
     right: 0
-
+    max-width: 215px
     margin: auto
     pointer-events: none
 
     @media (min-width: $screen-xs)
       width: auto
+      max-width: 150px
+
+    @media (min-width: $screen-sm)
+      width: auto
+      max-width: 500px
+
 
   .img-design
     top: 25%
 
-    @media (min-width: $screen-xs)
+    @media (min-width: $screen-sm)
       bottom: 10%
       top: auto
       left: 10%
@@ -70,16 +100,22 @@
     bottom: 5%
     width: 40%
 
-    @media (min-width: $screen-xs)
+    @media (min-width: $screen-sm)
       bottom: 10%
-      right: 10%
+      right: 15%
+      left: auto
+      width: auto
+
+    @media (min-width: $screen-sm)
+      bottom: 10%
+      right: 20%
       left: auto
       width: auto
 
   
 
 .work-title 
-  margin-left: $unit*10
+  text-align: center
 
 .work-heading
   position: relative

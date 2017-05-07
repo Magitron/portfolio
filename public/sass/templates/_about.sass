@@ -22,15 +22,51 @@
     button
       padding: 0
       font-weight: bold
-      font-size: .8em
+      font-size: .80em
+      color: $saphire
+      cursor: pointer
+
+      &::after
+        content: ''
+        width: 0%
+        height: 2px
+        background-color: $carnation
+        transition: $slow-animation
+        position: absolute
+        bottom: 0
+        left: 0
+
+      &.active
+        &::after
+          width: calc(100% - 16px)
+
+          @media (min-width: $screen-sm)
+            width: calc(100% - 20px)
+
+      @media (min-width: $screen-xs)
+        font-size: .90em
+
+      @media (min-width: $screen-md)
+        font-size: .95em
 
     li 
       padding-bottom: $unit*2
-      width: 100px
+      padding-right: $unit*3
+      position: relative
+
+      @media (min-width: $screen-xs)
+        padding-right: $unit*4
+
+      @media (min-width: $screen-sm)
+        padding-right: $unit*5
+
+
+    // li:last-child
+    //   padding-right: 0
 
     .border 
       position: absolute
-      width: 90px;
+      width: 105px;
       bottom: 0;
       left: 0
       height: 2px
@@ -49,26 +85,23 @@
       padding: $unit*10 !important
       min-height: 50vh
 
+  .about-photos
+    @media (min-width: $screen-xs)
+      height: 500px
 
+  .about-text
+    @media (min-width: $screen-sm)
+      height: 50vw
+      max-height: 500px
 
   .about-photos 
     margin: 0
     padding: 0 !important
     overflow: hidden
-    max-height: 80vh
 
     img 
       width: 130%
       max-width: auto
-    // padding-top: 120px !important;
-
-    // .card
-    //   width: span(10 of 12)
-    //   height: span(12 of 12)
-    //   padding: $unit*2
-
-    // .slick-list
-    //   box-shadow: $box-shadow
 
   .location,
   .education,
@@ -76,16 +109,16 @@
     background-size: cover
     
   .location
-    background-image: url('../img/thai.jpg')
-    background-position: center
-
-  .education
     background-image: url('../img/profilebw2.jpg')
     background-position: right top
 
-  .fun
-    background-image: url('../img/dexter.jpg')
+  .education
+    background-image: url('../img/profile2bw.jpg')
     background-position: center center
+
+  .fun
+    background-image: url('../img/dexbw.jpg')
+    background-position: right center
 
 .slider
   height: 63vh

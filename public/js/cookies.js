@@ -64,8 +64,7 @@ var docCookies = {
 };
 
 function createCookie() {
-  docCookies.setItem('more', 'true', ['Infinity']);
-  console.log('cookie set!');
+  docCookies.setItem('more', 'true', [3600]);
 }
 
 $( document ).ready(function() {
@@ -77,7 +76,6 @@ $( document ).ready(function() {
     $('.see-more').click( function() {
       $('.more').slideToggle(1000);
       $('.see-more').slideUp(1000);
-      docCookies.setItem('more', 'true', [3600]);
     });
   };
 });

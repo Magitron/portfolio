@@ -1,10 +1,11 @@
-.desktop-nav-container
+.dtnav-container
   width: 100%
   background-color: $saphire
-  position: fixed
   z-index: 100
   
-.desktop-nav
+.dtnav
+  width: 100%
+  position: absolute
   display: flex
   justify-content: space-between
   flex-direction: column
@@ -12,33 +13,81 @@
   padding: 0 $unit*5
   padding-bottom: $unit*4
   padding-top: $unit*4
-  padding-right: $unit*10
   top: 0
+  z-index: 10
 
   @media (min-width: $screen-xs)
     flex-direction: row
-  ul
-    padding: 0
-    margin: 0
-    display: flex
+
+.dtnav-list
+  padding: 0
+  margin: 0
+  display: flex
 
   li 
     list-style: none
-  a 
-    padding: $unit*3 $unit*6
-    color: $white
-    display: block
 
+.dtnav-email
+  display: none
 
-.contact-button
-  margin-top: $unit*6
+  @media (min-width: $screen-md)
+    display: flex
+
+    a
+      z-index: 1 !important
+      color: $white
+
+.dtnav-contact
+    width: 30px
+    fill: $white
+
+    @media (min-width: $screen-md)
+      display: none
+
+.dtnav-item 
+  padding: $unit*3 $unit*5
+  color: $white
   display: block
 
-  @media (min-width: $screen-xs)
-    margin-top: 0
-
-
-.desktop-home-icon
+.dtnav-home
   font-family: $rubik
-  font-size: 1.3em
-  padding: $unit*2 $unit*6 !important
+  font-size: 1.5em
+  padding: $unit*2 $unit*6 $unit*2 0 !important
+  color: $white
+
+.dtnav-drop
+  pointer-events: none
+  padding: $unit*2 0 !important
+  display: flex;
+  flex-direction: column;
+  height: 0
+  margin: 0 auto
+  position: absolute
+  z-index: 100
+  background: white
+  border-radius: 2px
+  left: -50px
+  right: -50px
+  opacity: 0
+  transition: opacity 500ms, height 700ms
+  box-shadow: 0px 2px 5px 4px rgba(0,0,0,0.1);
+
+  &::before
+    content: ''
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 10px 10px 10px
+    border-color: transparent transparent #ffffff transparent
+    position: absolute
+    left: 47%
+    top: -9px
+
+  .dtnav-item
+    color: $saphire
+    padding: $unit*3 $unit*4
+
+  &.active
+    pointer-events: auto
+    height: 148px
+    opacity: 1

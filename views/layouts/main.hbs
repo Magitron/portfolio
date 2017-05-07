@@ -13,51 +13,58 @@
 
   </head>
   <body>
-    <div class="desktop-nav-container hidden-xs-down">
-      <div class="container desktop-nav">
-        <ul>
-          <li><a class="desktop-home-icon link bold" href="/">MC</a></li>
-          <li><a class="link bold" href="https://github.com/Magitron" target="_blank">GitHub</a></li>
-          <li><a class="link bold" href="https://www.linkedin.com/in/maggiecaspar/" target="_blank">LinkedIn</a></li>
-          <li><a class="link bold" href="https://angel.co/maggie-caspar" target="_blank">Angel.co</a></li>
+    <div class="wrapper">
+      {{>desktopnav}}
+
+      <div class="mobile-nav-container hidden-sm-up">
+        <ul class="mobile-nav">
+         <li class="mobile-home-icon"><a href="/">MC</a></li>
+{{!--           <li class="flex mobile-email">
+            <a href="mailto:maggiecaspar@gmail.com" class=" ">Email me</a>
+          </li> --}}
+          <li class="mobile-menu-button">
+            <button class="mobile-nav-trigger">
+              <div class="ham">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+              </div>
+              Menu
+            </button>
+          </li>
         </ul>
-        <div class="slide-bttn">
-          <a href="mailto:maggiecaspar@gmail.com" class="bttn">Email me</a>
+      </div>
+      <ul class="mobile-sub-nav">
+        <div class="mobile-sub-nav-wrapper page-nav">
+          <div class=" uppercase color-grey mobile-nav-heading">Page Navigation</div>
+          <li><a class="link " href="#projects">Recent projects</a></li>
+          <li><a class="link " href="#work">What I do</a></li>
+          <li><a class="link " href="#about">About me</a></li>
+          <li><a class="link " href="#testimonials">Testimonials</a></li>
         </div>
-      </div>
-    </div>
-
-    <div class="mobile-nav-container hidden-xs-up">
-      <ul class="mobile-nav">
-        <li class="mobile-menu-button"><button class="mobile-nav-trigger"><div class="ham"><div class="bar bar1"></div><div class="bar bar2"></div><div class="bar bar3"></div></div>Menu</button></li>
-          <ul class="mobile-sub-nav">
-            <li><a class="link bold" href="https://github.com/Magitron" target="_blank">GitHub</a></li>
-            <li><a class="link bold" href="https://www.linkedin.com/in/maggiecaspar/" target="_blank">LinkedIn</a></li>
-            <li><a class="link bold" href="https://angel.co/maggie-caspar" target="_blank">Angel.co</a></li>
-            <div class="clear"></div>
-          </ul>
-        <li class="mobile-home-icon"><a href="/">MC</a></li>
-        <li class="flex mobile-email">
-          <a href="mailto:maggiecaspar@gmail.com" class=" ">Email me</a></div>
-        </li>
-
+        <div class="mobile-sub-nav-wrapper social-links">
+          <div class=" uppercase color-grey mobile-nav-heading">Social Links</div>
+          <li><a class="link">GitHub</a></li>
+          <li><a class="link" href="https://www.linkedin.com/in/maggiecaspar/" target="_blank">LinkedIn</a></li>
+          <li><a class="link" href="https://angel.co/maggie-caspar" target="_blank">Angel.co</a></li>
+          <div class="clear"></div>
+        </div>
       </ul>
-      
-    </div>
-    <main>
-      {{{@body}}}
-    </main>
-  <footer class="bg-cn">
-    <div class="footer">
-      <p class="float-left color-white bold">To get in touch with me about a potential project, please contact me via email.</p>
-      <div class="slide-bttn">
-        <a href="mailto:maggiecaspar@gmail.com" class="bttn">Email me</a>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </footer>
-  
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
+      <main>
+        {{{@body}}}
+      </main>
+      <footer class="bg-cn">
+        <div class="footer">
+          <p class="float-left color-white bold">To get in touch with me about a potential project, please contact me via email.</p>
+          <div class="footer-contact btn slide-btn red">
+            <a href="mailto:maggiecaspar@gmail.com" class="bttn">Email me</a>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </footer>
+    
+      <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    </div>
   </body>
 </html>
