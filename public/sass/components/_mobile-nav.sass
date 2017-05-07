@@ -1,17 +1,18 @@
 $nav-height: 50px
 
-.mobile-nav-container
+.mobnav-container
+  position: absolute
   width: 100%
-  background-color: $saphire
+  // background-color: $saphire
   color: $white
-  height: $nav-height
 
-.mobile-nav,
-.mobile-sub-nav
+.mobnav,
+.mobnav-sub
   padding: 0
   margin: 0
 
-.mobile-nav
+.mobnav
+  // height: $nav-height
   display: flex
   justify-content: space-between
 
@@ -23,117 +24,7 @@ $nav-height: 50px
       color: $white
       font-family: $rubik
 
-.mobile-sub-nav-wrapper
-  display: flex
-  flex-direction: column
-  text-align: center
-  font-size: 1.1em
-  text-align: left;
-  overflow: hidden
-  list-style: none
-
-  @media (min-width: $screen-xs)
-    display: block
-
-    li
-      width: 49%;
-      float: left;
-
-
-  &:first-child
-    border-bottom: 1px solid $concrete
-
-.mobile-nav-heading
-  padding: $unit*5 $unit*4 $unit*2 $unit*4
-  font-size: 0.75em
-  color: #C9C9C9
-  font-family: $rubik
-  letter-spacing: 0.5px
-
-.mobile-sub-nav
-  width: 92%
-  margin: 0 auto
-  position: absolute
-  z-index: 100
-  background: white
-  border-radius: 2px
-  left: 100%
-  right: 0
-  opacity: 0
-  transition: opacity 500ms, left 700ms
-  box-shadow: $box-shadow
-  top: 60px
-
-  // @media (min-width: $screen-xs)
-  //   top: -100px
-  //   position: absolute
-  //   height: auto !important
-  //   min-height: 1px !important
-  //   padding: 0
-
-  &.active
-    right: 0
-    left: 0
-    opacity: 0.98
-
-    // @media (min-width: $screen-xs)
-    //   top: $nav-height
-    //   z-index: -10
-    //   background-color: $saphire
-
-  // li a 
-  //   padding: $unit*5 $unit*4
-  //   display: block
-
-  //   @media (min-width: $screen-xs)
-  //     padding: $unit*3 $unit*4
-
-
-  .page-nav
-    @media (min-width: $screen-xs)
-      padding-bottom: $unit*2
-
-    a
-      font-family: $rubik
-      padding: $unit*4 $unit*4
-      display: block
-
-      @media (min-width: $screen-xs)
-        padding: $unit*3 $unit*4
-
-  .social-links
-    padding-bottom: $unit*4
-
-    a
-      display: block
-      padding: $unit*2 $unit*4
-
-.mobile-menu-button,
-.mobile-email,
-.mobile-home-icon
-  background-color: $saphire
-
-
-// .mobile-menu-button,
-// .mobile-email
-//   width: 25%
-
-// .mobile-email
-//   @include span(3 of 12 last)
-
-
-.mobile-home-icon
-  // width: 50%
-  text-align: center
-  font-family: $rubik
-  font-size: 1.4em
-
-  a
-    padding: $unit*3
-    display: block
-
-
-.mobile-nav-trigger
+.mobnav-trigger
   padding: $unit*3 15px
   display: block
   color: $white
@@ -157,6 +48,108 @@ $nav-height: 50px
     display: block
     border: 1px solid $white
     border-radius: $border-radius
+
+.mobnav-button,
+.mobile-email,
+.mobnav-home
+  // background-color: $saphire
+
+.mobnav-home
+  text-align: center
+  font-family: $rubik
+  font-size: 1.4em
+
+  a
+    padding: $unit*3
+    display: block
+
+
+
+// SUB NAV
+
+.mobnav-sub
+  pointer-events: none
+  position: absolute
+  overflow-x: hidden
+  height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  text-align: center
+  font-size: 1.1em
+  text-align: left
+  overflow: hidden
+  list-style: none
+
+  @media (min-width: $screen-xs)
+    display: block
+
+    li
+      width: 49%;
+      float: left;
+
+
+  &:first-child
+    border-bottom: 1px solid $concrete
+
+.mobnav-sub-wrapper
+  list-style: none
+  padding: 0
+  width: 92%
+  margin: 0 auto
+  position: absolute
+  z-index: 100
+  background: white
+  border-radius: 2px
+  left: 100%
+  right: 0
+  opacity: 0
+  transition: opacity 500ms, left 700ms, width 700ms
+  box-shadow: $box-shadow
+  top: 10px
+
+  &.active
+    pointer-events: all
+    right: 0
+    left: 0
+    opacity: 0.98
+
+.mobnav-sub__heading
+  font-size: 0.75em
+  color: #C9C9C9
+  font-family: $rubik
+  letter-spacing: 0.5px
+  padding-left: $unit*4
+
+.mobnav-sub__item
+  display: block
+
+.mobnav-sub__nav
+  padding-top: $unit*4
+
+.mobnav-sub__nav .mobnav-sub__item
+  font-family: $rubik
+  padding: $unit*4
+
+  @media (min-width: $screen-xs)
+    padding: $unit*2 $unit*4
+
+.mobnav-sub__links
+  padding-top: $unit*3
+  padding-bottom: $unit*4
+
+.mobnav-sub__links .mobnav-sub__item
+  padding: $unit*2 $unit*4
+
+  @media (min-width: $screen-xs)
+    padding: $unit $unit*4
+
+// .mobnav-sub__nav
+  // @media (min-width: $screen-xs)
+  //   padding-bottom: $unit*2
+
+  // @media (min-width: $screen-xs)
+  //   padding: $unit*3 $unit*4
 
 
 

@@ -105,18 +105,18 @@ $( document ).ready(function() {
   });
 
   $(window).click(function() {
-    $('.mobile-sub-nav').removeClass('active');
+    $('.mobnav-sub-wrapper').removeClass('active');
     $('.ham').removeClass('active');
   });
 
-  $('.mobile-nav-trigger').click( function(event) {
+  $('.js-mobnav-trigger').click( function(event) {
     event.stopPropagation();
-    $('.mobile-sub-nav').toggleClass('active');
+    $('.mobnav-sub-wrapper').toggleClass('active');
     $('.ham').toggleClass('active');
   });
 
-  $('.mobile-sub-nav').find('.link').click( function() {
-    $('.mobile-sub-nav').removeClass('active');
+  $('.mobnav-sub-wrapper').find('.link').click( function() {
+    $('.mobnav-sub-wrapper').removeClass('active');
   });
 
   $('.js-dtnav, .dtnav-drop').hover( function() {

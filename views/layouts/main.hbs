@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/cookies.js"></script>
@@ -25,40 +25,7 @@
     <div class="wrapper">
       {{>desktopnav}}
 
-      <div class="mobile-nav-container hidden-sm-up">
-        <ul class="mobile-nav">
-         <li class="mobile-home-icon"><a href="/">MC</a></li>
-{{!--           <li class="flex mobile-email">
-            <a href="mailto:maggiecaspar@gmail.com" class=" ">Email me</a>
-          </li> --}}
-          <li class="mobile-menu-button">
-            <button class="mobile-nav-trigger">
-              <div class="ham">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-              </div>
-              Menu
-            </button>
-          </li>
-        </ul>
-      </div>
-      <ul class="mobile-sub-nav">
-        <div class="mobile-sub-nav-wrapper page-nav">
-          <div class=" uppercase color-grey mobile-nav-heading">Page Navigation</div>
-          <li><a class="link " href="#projects">Recent projects</a></li>
-          <li><a class="link " href="#work">What I do</a></li>
-          <li><a class="link " href="#about">About me</a></li>
-          <li><a class="link " href="#testimonials">Testimonials</a></li>
-        </div>
-        <div class="mobile-sub-nav-wrapper social-links">
-          <div class=" uppercase color-grey mobile-nav-heading">Social Links</div>
-          <li><a class="link">GitHub</a></li>
-          <li><a class="link" href="https://www.linkedin.com/in/maggiecaspar/" target="_blank">LinkedIn</a></li>
-          <li><a class="link" href="https://angel.co/maggie-caspar" target="_blank">Angel.co</a></li>
-          <div class="clear"></div>
-        </div>
-      </ul>
+      {{>mobilenav}}
 
       <main>
         {{{@body}}}

@@ -17,12 +17,17 @@
       height: auto
       padding-bottom: $unit*14
 
-  .port-text.sm
-    background-color: $saphire
+    @media (min-width: $screen-sm)
+      height: 50vw
+
+  // .port-text.sm
+  //   background-color: $saphire
 
   .port-title
     font-size: 0.7em
 
+.portfolio-white
+  background-color: $white
 
 .portfolio-title
   width: 100%;
@@ -33,6 +38,12 @@
 .portfolio-text-container
   @media (min-width: $screen-md)
     max-width: 420px
+
+.portfolio-chess
+  background: rgb(71,116,230); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(71,116,230,1) 0%, rgba(31,30,138,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(71,116,230,1) 0%,rgba(31,30,138,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: $gradient
 
   // @media (min-width: $screen-xs)
   //   position: absolute
