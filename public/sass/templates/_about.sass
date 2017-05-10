@@ -6,14 +6,19 @@
     display: flex
     flex-direction: row
 
-  h3
-    margin-bottom: $unit*10
+  .slick-list,
+  .slick-track
+    height: 100%
+
+  .box
+    padding: $unit*5
+    min-height: 500px
 
     @media (min-width: $screen-xs)
-      margin-bottom: $unit*10  
-      margin-top: 0
+      padding: $unit*10 !important
 
-  .slick-dots
+
+.about-slider-controls .slick-dots
     margin-bottom: $unit*5
 
     display: flex
@@ -60,10 +65,6 @@
       @media (min-width: $screen-sm)
         padding-right: $unit*5
 
-
-    // li:last-child
-    //   padding-right: 0
-
     .border 
       position: absolute
       width: 105px;
@@ -73,57 +74,46 @@
       background-color: $carnation
       transition: $slow-animation
   
-  .slick-list,
-  .slick-track
-    height: 100%
+  
+.about-photos
+  @media (min-width: $screen-xs)
+    height: 500px
 
-  .box
-    padding: $unit*5
-    min-height: 500px
+.about-text
+  @media (min-width: $screen-sm)
+    height: 50vw
+    max-height: 500px
 
-    @media (min-width: $screen-xs)
-      padding: $unit*10 !important
-      // min-height: 50vh
+.about-photos 
+  margin: 0
+  padding: 0 !important
+  overflow: hidden
 
-  .about-photos
-    @media (min-width: $screen-xs)
-      height: 500px
+  img 
+    width: 130%
+    max-width: auto
 
-  .about-text
-    @media (min-width: $screen-sm)
-      height: 50vw
-      max-height: 500px
+.about__location,
+.about__education,
+.about__fun
+  background-size: cover
+  
+.about__location
+  background-image: url('../img/profilebw2.jpg')
+  background-position: right top
 
-  .about-photos 
-    margin: 0
-    padding: 0 !important
-    overflow: hidden
+.about__education
+  background-image: url('../img/profile2bw.jpg')
+  background-position: center center
 
-    img 
-      width: 130%
-      max-width: auto
+.about__fun
+  background-image: url('../img/dexbw.jpg')
+  background-position: right center
 
-  .location,
-  .education,
-  .fun
-    background-size: cover
-    
-  .location
-    background-image: url('../img/profilebw2.jpg')
-    background-position: right top
 
-  .education
-    background-image: url('../img/profile2bw.jpg')
-    background-position: center center
+.about-header
+  margin-bottom: $unit*10
 
-  .fun
-    background-image: url('../img/dexbw.jpg')
-    background-position: right center
-
-.slider
-  height: 63vh
-  display: flex
-  align-items: center
-
-.see-more .btn
-  margin: $unit*5 auto
+  @media (min-width: $screen-xs)
+    margin-bottom: $unit*10  
+    margin-top: 0
