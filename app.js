@@ -23,7 +23,7 @@ app.use(hbs({
 router
   .get('/', function *() {
     yield this.render('home', {
-      title: 'Home'
+      title: 'Maggie Caspar'
     });
   })
 
@@ -47,19 +47,19 @@ router
 
   .get('/messaging', function *() {
     yield this.render('portfolio/messaging', {
-      title: 'messaging'
+      title: 'Messaging Feature for ParkPnP'
     });
   })
 
   .get('/hotnight', function *() {
     yield this.render('portfolio/hotnight', {
-      title: 'hotnight'
+      title: 'Hotnight.ca'
     });
   })
 
   .get('/lighthouselabs', function *() {
     yield this.render('portfolio/lighthouselabs', {
-      title: 'lighthouselabs'
+      title: 'Lighthouselabs'
     });
   })
 
@@ -71,7 +71,7 @@ router
 
   .get('/digital-divide', function *() {
     yield this.render('portfolio/digitaldivide', {
-      title: 'Nuancing the Digital Divide'
+      title: 'Infographics'
     });
   })
 

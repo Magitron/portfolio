@@ -17,17 +17,17 @@ $( document ).ready(function() {
 
   $('.about .slick-dots li:first-child button').addClass('active');
 
-  var title = $('.about .slick-dots li button');
+  const title = $('.about .slick-dots li button');
   $(title).click( function() {
     $(title).not(this).removeClass('active');
     $(this).addClass('active');
   });
 
   $('.dtnav-list, .mobnav-sub').find('a').click(function(){
-    var $href = $(this).attr('href');{
+    var $href = $(this).attr('href').substr(1);
     var $anchor = $($href).offset();
     $('body').animate({ scrollTop: $anchor.top });
-    return false;}
+    return false;
   });
 
   // $('.work').find('.slider-content').slick({
