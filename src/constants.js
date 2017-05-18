@@ -12,3 +12,7 @@ export const colors = {
   wall: '#F9F9F9',
   white: '#FFFFFF'
 };
+
+export const gradients = {
+  saphire: 'linear-gradient(135deg, rgba(31,30,138,1) 0%, rgba(71,116,230,1) 100%)'
+};
