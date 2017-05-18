@@ -1,37 +1,24 @@
 {
-  "name": "mc-portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "gulp build",
-    "start": "node --harmony app.js"
-  },
-  "engines": {
-    "node": "6.10.0"
-  },
-  "author": "Maggie Caspar",
-  "license": "MIT",
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "co-views": "^2.1.0",
-    "compass": "^0.1.1",
-    "gulp": "^3.9.1",
-    "gulp-compass": "^2.1.0",
-    "gulp-copy": "^1.0.0",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.0.1",
-    "imagemin-pngquant": "^5.0.0",
-    "koa": "^2.0.1",
-    "koa-handlebars": "^1.0.0",
-    "koa-logger": "^2.0.1",
-    "koa-router": "^5.4.0",
-    "koa-static": "^3.0.0",
-    "normalize": "^0.3.1",
-    "rimraf": "^2.6.1",
-    "run-sequence": "^1.2.2",
-    "susy": "^2.2.12"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "styled-components": "^1.4.6"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "0.0.1",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
