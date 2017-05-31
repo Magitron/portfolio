@@ -41,7 +41,25 @@ router
 
   .get('/uxsummit', function *() {
     yield this.render('blogposts/uxsummit', {
-      title: 'project-title'
+      title: 'UX Futures Summit'
+    });
+  })
+
+  .get('/empathy', function *() {
+    yield this.render('blogposts/empathy', {
+      title: 'What is Empathy?'
+    });
+  })
+
+  .get('/design', function *() {
+    yield this.render('blogposts/design', {
+      title: 'How did you become a Designer?'
+    });
+  })
+
+  .get('/develop', function *() {
+    yield this.render('blogposts/develop', {
+      title: 'How did you become a Developer?'
     });
   })
 

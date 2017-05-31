@@ -8,9 +8,6 @@
     font-size: 1em
 
   a
-    text-align: right
-    margin-top: $unit*3
-    font-size: 0.8em
     display: block
 
   &.card
@@ -34,11 +31,16 @@
 
 .blog-sum
   display: flex
-  width: span(10 of 12)
+  width: span(11 of 12)
   margin: 0 auto
+
+  @media (min-width: $screen-xs)
+    width: span(10 of 12)
 
 .blog-date
   width: span(3 of 12)
+  text-align: right
+  padding-right: 20px
 
 .blog-content
   width: span(9 of 12)
@@ -69,20 +71,22 @@
 
 // Blog Template
 .blog-hero 
-  height: 40vh;
-  min-height: 200px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  height: 40vh
+  min-height: 200px
+  display: flex
+  justify-content: flex-start
+  align-items: flex-end
   padding-bottom: $unit*2
+  background: $gradient
 
   h1
     width: 100%
     margin-left: $unit*14
 
     @media (min-width: $screen-xs)
-      width: 625px;
-      margin: 0 auto;
+      width: 625px
+      max-width: 90%
+      margin: 0 auto
 
 // Blog Post
 // ===
@@ -91,6 +95,8 @@
   padding-bottom: $unit*20
 
   h1,
+  h2,
+  h4,
   p,
   ul,
   .blog-img,
@@ -104,6 +110,47 @@
 
     @media (min-width: $screen-sm)
       padding: 0  
+
+  p:first-of-type:first-letter
+    float: left
+    font-family: $rubik
+    font-size: 2.875em
+    font-weight: 700
+    line-height: 50px
+    margin: 0px 8px -5px 0
+    line-height: 60px
+    color: $carnation
+
+  p,
+  li
+    font-family: Georgia
+    color: #222222
+    font-size: 19px
+    line-height: 29px
+
+    a
+     color: #222222
+     text-decoration: underline
+
+  ul
+    margin: $unit*8 auto
+
+  h2
+    margin-top: $unit*10
+    margin-bottom: $unit*7
+
+  h1
+    margin-top: $unit*10
+    font-size: 1.8em
+
+    @media (min-width: $screen-xs)
+      margin-bottom: $unit*7
+      font-size: 2.197em
+
+.blog-image
+  margin: $unit*10 auto
+  display: block
+  max-width: 400px
 
 .blog-img-container
   background-color: $wall
@@ -152,6 +199,38 @@
 .blog-img-3
   @include span(6 of 12 last)
 
+iframe
+  display: block
+  margin-right: -20px
+  margin-left: -20px
+  margin-top: $unit*15
+  margin-bottom: $unit*15
+
+  @media (min-width: $screen-xs)
+    max-width: 560px
+    max-height: 315px
+    margin: $unit*15 auto
+
+.blog-subtitle
+  font-size: 0.85em
+  color: #C9C9C9
+  font-family: $rubik
+  letter-spacing: 0.5px
+  text-transform: uppercase
+  margin-bottom: $unit*2
+
+.blog-link
+  font-size: 0.8em
+  text-align: right
+  margin-top: 12px
+
+.blog-post-link
+  max-width: 625px
+  margin: 0 auto
+  display: block
+  text-align: right
+
+
 
 // Slider
 
@@ -167,7 +246,7 @@
       padding: $unit*15 $unit*6
 
       img
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15)
 
   .slide-generator
     bottom: auto
@@ -176,3 +255,40 @@
   .container 
     display: block
     margin-top: $unit*15
+
+  .blog-p-feat
+    font-size: 1.4em
+    line-height: 1.3em
+
+
+.blog-side-image
+  display: none
+
+  @media (min-width: $screen-sm)
+    display: block
+    width: 100%
+    height: 500px
+    background-image: url('../img/bananas.jpg')
+    background-size: cover
+
+.blog-column
+  width: 100%
+
+  @media (min-width: $screen-sm)
+    width: 50%
+    float: left
+
+  .feature.card
+    margin: 0 auto
+
+  .bg-cn
+    padding-top: $unit*20
+    padding-bottom: $unit*20
+
+.blog-column__feat
+
+  @media (min-width: $screen-sm)
+    max-width: 500px
+
+
+
