@@ -69,6 +69,19 @@ router
     });
   })
 
+  .get('/ebrake', function *() {
+    yield this.render('portfolio/ebrake', {
+      title: 'Creating a sleek corporate experience'
+    });
+  })
+
+    .get('/dittly', function *() {
+    yield this.render('portfolio/dittly', {
+      title: 'Solving the DIY experience'
+    });
+  })
+
+
   .get('/hotnight', function *() {
     yield this.render('portfolio/hotnight', {
       title: 'Hotnight.ca'
