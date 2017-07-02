@@ -13,4 +13,12 @@ const Hero = styled.div`
   text-align: center;
 `;
 
+const HeroHalf = styled.div`
+  width: 50%;
+  align-items: center;
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 40px;
+`;
+
 export default Hero;

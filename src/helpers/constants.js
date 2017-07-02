@@ -18,7 +18,7 @@ export const colors = {
 
   // UI Colors
   notBlack: '#242935',
-  carkBrey: '#626262',
+  darkGrey: '#626262',
   concrete: '#DFE1E4',
   lightGrey: '#F8F8F8',
   wall: '#F9F9F9',
