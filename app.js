@@ -140,6 +140,12 @@ router
     yield this.render('portfolio/possible', {
       title: 'Possible Canadas'
     });
+  })
+
+  .get('/painpal', function *() {
+    yield this.render('portfolio/painpal', {
+      title: 'Pain Pal'
+    });
   });
 app.use(router.routes());
 
